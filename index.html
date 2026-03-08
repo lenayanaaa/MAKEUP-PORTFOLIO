@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makeup by El | Freelance Makeup Artist</title>
+    <meta
+      name="description"
+      content="Professional freelance makeup artist based in Sampaloc, Manila specializing in special events, graduations, and home services."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">Makeup by El</a>
+        <ul class="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-btn">BOOK NOW</a>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-subtitle"
+          >FREELANCE MAKEUP ARTIST FOR SPECIAL EVENTS</span
+        >
+        <h1 class="hero-title">Makeup by El</h1>
+        <p class="hero-tagline">
+          Enhancing your beauty for every special moment.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">BOOK AN APPOINTMENT</a>
+          <a href="#portfolio" class="btn btn-outline">VIEW PORTFOLIO</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container text-center reveal">
+        <span class="section-label">GET TO KNOW ME</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="title-divider"></div>
+        <p class="about-text">
+          Hi! I’m El, a freelance makeup artist based in Sampaloc, Manila. I
+          started my makeup journey in 2023 and specialize in creating beautiful
+          looks for special occasions. I provide home service makeup for events
+          such as graduations, birthdays, and other celebrations. My goal is to
+          enhance my clients’ natural beauty and help them feel confident and
+          glamorous for their special moments.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container reveal">
+        <div class="text-center">
+          <span class="section-label">WHAT I OFFER</span>
+          <h2 class="section-title">Services & Rates</h2>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="8"
+                  y="12"
+                  width="8"
+                  height="10"
+                  rx="1"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M10 12V7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7V12"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M11 5V3C11 2.44772 11.4477 2 12 2C12.5523 2 13 2.44772 13 3V5"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="8"
+                  y1="16"
+                  x2="16"
+                  y2="16"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </div>
+            <h3>Makeup Only</h3>
+            <p class="price">₱800</p>
+            <p class="service-desc">
+              Full glam or natural makeup tailored to your event and style.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="9"
+                  r="7"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M12 16V22"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9 22H15"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M15 7C15 7 14 6 12 6"
+                  stroke="#D48B9E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Hair and Makeup</h3>
+            <p class="price">₱1,000</p>
+            <p class="service-desc">
+              Complete hair styling and makeup for a polished, event-ready look.
+            </p>
+          </div>
+        </div>
+
+        <p class="service-note">Home service available around Metro Manila. There's a transpo fee if not around Sampaloc, Manila</p>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container reveal">
+        <div class="text-center">
+          <span class="section-label">MY WORK</span>
+          <h2 class="section-title">Portfolio</h2>
+        </div>
+
+        <div class="carousel-container">
+          <button class="carousel-btn prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          
+          <div class="carousel-track">
+            <!-- Items remain the same, will be cloned in JS -->
+            <!-- Glam Section -->
+            <div class="portfolio-item">
+              <div class="img-container">
+                <img src="assets/glam.jfif" alt="Glam Look" />
+                <div class="item-overlay">
+                  <span>Glam</span>
+                  <p>Elegant and bold for evening events.</p>
+                </div>
+              </div>
+              <div class="portfolio-label">Glam</div>
+            </div>
+            <div class="portfolio-item">
+              <div class="img-container">
+                <img src="assets/glam1.jfif" alt="Glam Variation" />
+                <div class="item-overlay">
+                  <span>Glam Variation</span>
+                  <p>Sophisticated look with refined details.</p>
+                </div>
+              </div>
+              <div class="portfolio-label">Glam Variation</div>
+            </div>
+
+            <!-- Soft Glam Section -->
+            <div class="portfolio-item">
+              <div class="img-container">
+                <img src="assets/soft-glam.jfif" alt="Soft Glam Look" />
+                <div class="item-overlay">
+                  <span>Soft Glam</span>
+                  <p>Natural and glowing for daytime elegance.</p>
+                </div>
+              </div>
+              <div class="portfolio-label">Soft Glam</div>
+            </div>
+
+            <!-- Thai Section -->
+            <div class="portfolio-item">
+              <div class="img-container">
+                <img src="assets/thai.jfif" alt="Thai Makeup Look" />
+                <div class="item-overlay">
+                  <span>Thai Look</span>
+                  <p>Traditional aesthetics with modern techniques.</p>
+                </div>
+              </div>
+              <div class="portfolio-label">Thai Look</div>
+            </div>
+            <div class="portfolio-item">
+              <div class="img-container">
+                <img src="assets/thai1.jfif" alt="Thai Variation" />
+                <div class="item-overlay">
+                  <span>Thai Variation</span>
+                  <p>Capturing the grace of Thai beauty styles.</p>
+                </div>
+              </div>
+              <div class="portfolio-label">Thai Variation</div>
+            </div>
+
+            <!-- Douyin Section -->
+            <div class="portfolio-item">
+              <div class="img-container">
+                <img src="assets/douyin.jfif" alt="Douyin Makeup Look" />
+                <div class="item-overlay">
+                  <span>Douyin</span>
+                  <p>Trendy, ethereal, and shimmery aesthetics.</p>
+                </div>
+              </div>
+              <div class="portfolio-label">Douyin</div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container reveal">
+        <div class="text-center">
+          <span class="section-label">KIND WORDS</span>
+          <h2 class="section-title">Testimonials</h2>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-proof">
+            <img src="assets/testimonial-proof.png" alt="Client Feedback Proof" />
+          </div>
+          <p class="author">— HAPPY CLIENT</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="contact">
+      <div class="container text-center reveal">
+        <h2 class="section-title">Connect with Me</h2>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <p>Sampaloc, Manila</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3>Phone</h3>
+              <p>09926653116</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/people/Makeup-by-El/61588476788524/" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 16.9912 5.65677 21.1283 10.4375 21.8785V14.8906H7.89844V12H10.4375V9.79688C10.4375 7.29063 11.9305 5.90625 14.2148 5.90625C15.3086 5.90625 16.4531 6.10156 16.4531 6.10156V8.5625H15.1922C13.95 8.5625 13.5625 9.33333 13.5625 10.1242V12H16.3359L15.8926 14.8906H13.5625V21.8785C18.3432 21.1283 22 16.9912 22 12Z" />
+            </svg>
+            <span>Makeup by El</span>
+          </a>
+          <a href="https://www.instagram.com/elglams_" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>@elglams_</span>
+          </a>
+        </div>
+
+        <p class="copyright">&copy; 2026 Makeup by El. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Lightbox Context Menu / Popup -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <div class="lightbox-container">
+        <img class="lightbox-content" id="img01" />
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p id="modal-desc"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
