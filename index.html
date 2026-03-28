@@ -83,90 +83,38 @@
         </div>
 
         <div class="services-grid">
-          <!-- Card 1 -->
+          <!-- Card 1: General Services -->
           <div class="service-card">
-            <div class="service-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="8"
-                  y="12"
-                  width="8"
-                  height="10"
-                  rx="1"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                />
-                <path
-                  d="M10 12V7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7V12"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                />
-                <path
-                  d="M11 5V3C11 2.44772 11.4477 2 12 2C12.5523 2 13 2.44772 13 3V5"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                />
-                <line
-                  x1="8"
-                  y1="16"
-                  x2="16"
-                  y2="16"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                />
-              </svg>
-            </div>
-            <h3>Makeup Only</h3>
-            <p class="price">₱800</p>
-            <p class="service-desc">
-              Full glam or natural makeup tailored to your event and style.
-            </p>
+            <div class="service-category-tag">General Services</div>
+            <h3>Regular Events</h3>
+            <ul class="price-list">
+              <li>
+                <span class="service-name">Soft Glam (Makeup Only)</span>
+                <span class="service-price">₱1,000 - ₱1,500</span>
+              </li>
+              <li>
+                <span class="service-name">Soft Glam (Hair + Makeup)</span>
+                <span class="service-price">₱1,500 - ₱2,000</span>
+              </li>
+              <li>
+                <span class="service-name">Full Glam</span>
+                <span class="service-price">₱1,500 - ₱2,500</span>
+              </li>
+            </ul>
+            <p class="service-desc">Perfect for graduations, birthdays, and special celebrations.</p>
           </div>
 
-          <!-- Card 2 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="12"
-                  cy="9"
-                  r="7"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                />
-                <path
-                  d="M12 16V22"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M9 22H15"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M15 7C15 7 14 6 12 6"
-                  stroke="#D48B9E"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-            <h3>Hair and Makeup</h3>
-            <p class="price">₱1,000</p>
-            <p class="service-desc">
-              Complete hair styling and makeup for a polished, event-ready look.
-            </p>
+          <!-- Card 2: Group Bookings -->
+           <div class="service-card highlighted-service">
+            <div class="service-category-tag">Group Save</div>
+            <h3>Group Bookings</h3>
+            <ul class="price-list group-list">
+              <li>
+                <span class="service-name">Hair + Makeup</span>
+                <span class="service-price">₱1,200 - ₱1,800 <small>/head</small></span>
+              </li>
+            </ul>
+            <p class="service-desc">Special rates for group bookings of more than 2 persons.</p>
           </div>
         </div>
 
@@ -182,89 +130,141 @@
           <h2 class="section-title">Portfolio</h2>
         </div>
 
-        <div class="carousel-container">
-          <button class="carousel-btn prev" aria-label="Previous">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          
-          <div class="carousel-track">
-            <!-- Items remain the same, will be cloned in JS -->
-            <!-- Glam Section -->
-            <div class="portfolio-item">
-              <div class="img-container">
-                <img src="assets/glam.jfif" alt="Glam Look" />
-                <div class="item-overlay">
-                  <span>Glam</span>
-                  <p>Elegant and bold for evening events.</p>
-                </div>
-              </div>
-              <div class="portfolio-label">Glam</div>
-            </div>
-            <div class="portfolio-item">
-              <div class="img-container">
-                <img src="assets/glam1.jfif" alt="Glam Variation" />
-                <div class="item-overlay">
-                  <span>Glam</span>
-                  <p>Sophisticated look with refined details.</p>
-                </div>
-              </div>
-              <div class="portfolio-label">Glam</div>
-            </div>
+        <!-- Mobile Portfolio Tabs -->
+        <div class="portfolio-tabs">
+          <button class="tab-btn active" data-target="soft-glam-sec">Soft Glam</button>
+          <button class="tab-btn" data-target="glam-sec">Glamour</button>
+          <button class="tab-btn" data-target="creative-sec">Creative</button>
+        </div>
 
-            <!-- Soft Glam Section -->
-            <div class="portfolio-item">
-              <div class="img-container">
-                <img src="assets/soft-glam.jfif" alt="Soft Glam Look" />
-                <div class="item-overlay">
-                  <span>Soft Glam</span>
-                  <p>Natural and glowing for daytime elegance.</p>
-                </div>
+        <div class="portfolio-sections">
+          <!-- 01 Soft Glam Section -->
+          <div id="soft-glam-sec" class="look-section reveal">
+            <div class="look-header">
+              <span class="look-number">01</span>
+              <div class="look-info">
+                <h3>SOFT GLAM</h3>
+                <p>Natural and glowing artistry for a timeless, effortless look. Combining natural radiance with Thai-inspired elegance.</p>
               </div>
-              <div class="portfolio-label">Soft Glam</div>
             </div>
-
-            <!-- Thai Section -->
-            <div class="portfolio-item">
-              <div class="img-container">
-                <img src="assets/thai.jfif" alt="Thai Makeup Look" />
-                <div class="item-overlay">
-                  <span>Thai Look</span>
-                  <p>Traditional aesthetics with modern techniques.</p>
+            <div class="editorial-grid grid-layout-soft-glam">
+              <div class="portfolio-item" data-title="SOFT GLAM" data-description="Natural and glowing for daytime elegance.">
+                <div class="img-container">
+                  <img src="assets/soft-glam.jfif" alt="Soft Glam" />
+                  <div class="item-overlay"></div>
                 </div>
               </div>
-              <div class="portfolio-label">Thai Look</div>
-            </div>
-            <div class="portfolio-item">
-              <div class="img-container">
-                <img src="assets/thai1.jfif" alt="Thai Variation" />
-                <div class="item-overlay">
-                  <span>Thai Look</span>
-                  <p>Capturing the grace of Thai beauty styles.</p>
+              <div class="portfolio-item" data-title="NATURAL GLOW" data-description="Subtle and radiant beauty.">
+                <div class="img-container">
+                  <img src="assets/soft-glam1.jfif" alt="Soft Glam" />
+                  <div class="item-overlay"></div>
                 </div>
               </div>
-              <div class="portfolio-label">Thai Look</div>
-            </div>
-
-            <!-- Douyin Section -->
-            <div class="portfolio-item">
-              <div class="img-container">
-                <img src="assets/douyin.jfif" alt="Douyin Makeup Look" />
-                <div class="item-overlay">
-                  <span>Douyin</span>
-                  <p>Trendy, ethereal, and shimmery aesthetics.</p>
+              <div class="portfolio-item" data-title="DEWY RADIANCE" data-description="Focus on light-catching skin.">
+                <div class="img-container">
+                  <img src="assets/soft-glam2.jfif" alt="Soft Glam" />
+                  <div class="item-overlay"></div>
                 </div>
               </div>
-              <div class="portfolio-label">Douyin</div>
+              <div class="portfolio-item" data-title="GRACEFUL THAI" data-description="Traditional aesthetics with modern techniques.">
+                <div class="img-container">
+                  <img src="assets/thai.jfif" alt="Thai Look" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="FRESH LOOK" data-description="Clean and minimal sophistication.">
+                <div class="img-container">
+                  <img src="assets/soft-glam4.jfif" alt="Soft Glam" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="ELEGANT SOFT" data-description="Soft-focus beauty for special days.">
+                <div class="img-container">
+                  <img src="assets/soft-glam5.jfif" alt="Soft Glam" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="SILK FINISH" data-description="Refined and smooth skin artistry.">
+                <div class="img-container">
+                  <img src="assets/soft-glam6.jfif" alt="Soft Glam" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="THAI GLOW" data-description="Capturing the grace of Thai beauty.">
+                <div class="img-container">
+                  <img src="assets/thai1.jfif" alt="Thai Look" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <button class="carousel-btn next" aria-label="Next">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
+          <!-- 02 Glamour Portfolio Section -->
+          <div id="glam-sec" class="look-section reveal">
+            <div class="look-header header-right">
+              <span class="look-number">02</span>
+              <div class="look-info">
+                <h3>GLAMOUR PORTFOLIO</h3>
+                <p>Sophisticated and bold artisty for high-end events and evening celebrations. Focus on flawless skin and dramatic accents.</p>
+              </div>
+            </div>
+            <div class="editorial-grid grid-layout-glamour">
+              <div class="portfolio-item grid-featured" data-title="GOLDEN RADIANCE" data-description="Elegant makeup for special occasions.">
+                <div class="img-container">
+                  <img src="assets/glam2.jfif" alt="Glam Look" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="SOFT GLAMOUR" data-description="Natural yet professional event makeup.">
+                <div class="img-container">
+                  <img src="assets/glam3.jfif" alt="Glam" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="BOLD EMERALD" data-description="Striking look for high-impact presence.">
+                <div class="img-container">
+                  <img src="assets/glam4.jfif" alt="Glam" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="CLASSIC GLAM" data-description="Timeless beauty for every occasion.">
+                <div class="img-container">
+                  <img src="assets/glam5.jfif" alt="Glam" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item grid-filler">
+                <div class=" editorial-quote">
+                  <p>"Beauty is about enhancing what you have. Let yourself shine through."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 Creative Looks Section -->
+          <div id="creative-sec" class="look-section reveal">
+            <div class="look-header">
+              <span class="look-number">03</span>
+              <div class="look-info">
+                <h3>CREATIVE LOOKS</h3>
+                <p>Pushing the boundaries of traditional beauty with trendy Douyin aesthetics and artistic expressions.</p>
+              </div>
+            </div>
+            <div class="editorial-grid grid-layout-creative">
+               <div class="portfolio-item" data-title="CREATIVE DOUYIN" data-description="Trendy, ethereal, and shimmery aesthetics.">
+                <div class="img-container">
+                  <img src="assets/creative.jfif" alt="Creative Look" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+              <div class="portfolio-item" data-title="EDITORIAL COLOR" data-description="Bold artistic expression and techniques.">
+                <div class="img-container">
+                  <img src="assets/creative2.jfif" alt="Creative Look" />
+                  <div class="item-overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -277,12 +277,34 @@
           <h2 class="section-title">Testimonials</h2>
         </div>
 
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <div class="testimonial-proof">
-            <img src="assets/testimonial-proof.png" alt="Client Feedback Proof" />
+        <div class="testimonial-slider-container">
+          <button class="slider-btn prev-btn" aria-label="Previous Testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          
+          <div class="testimonial-wrapper">
+            <div class="testimonial-track">
+              <div class="testimonial-card">
+                <div class="testimonial-proof">
+                  <img src="assets/testimonial-proof.png" alt="Client Feedback Proof" />
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-proof">
+                  <img src="assets/testimonial1.jfif" alt="Client Feedback Proof" />
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-proof">
+                  <img src="assets/testimonial2.jfif" alt="Client Feedback Proof" />
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="author">— HAPPY CLIENT</p>
+
+          <button class="slider-btn next-btn" aria-label="Next Testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -344,10 +366,6 @@
       <span class="close-lightbox">&times;</span>
       <div class="lightbox-container">
         <img class="lightbox-content" id="img01" />
-        <div class="modal-info">
-          <h2 id="modal-title"></h2>
-          <p id="modal-desc"></p>
-        </div>
       </div>
     </div>
 
