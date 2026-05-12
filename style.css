@@ -499,206 +499,157 @@ section {
   margin-top: 60px;
 }
 
-.look-section {
+.portfolio-category {
   margin-bottom: 120px;
 }
 
-.look-header {
+.category-header {
   display: flex;
-  align-items: flex-start;
-  gap: 30px;
+  align-items: flex-end;
+  justify-content: space-between;
   margin-bottom: 50px;
-  max-width: 900px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
 }
 
-.look-header.header-right {
-  margin-left: auto;
-  flex-direction: row-reverse;
-  text-align: right;
-}
-
-.look-number {
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
-  line-height: 1;
-  color: var(--primary-pink);
-  opacity: 0.3;
-  font-weight: 700;
-}
-
-.look-info h3 {
-  font-size: 2rem;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-  color: var(--text-dark);
-}
-
-.look-info p {
-  color: var(--text-light);
-  font-size: 1rem;
-  max-width: 450px;
-}
-
-.editorial-grid {
-  display: grid;
+.category-title-wrap {
+  display: flex;
+  align-items: baseline;
   gap: 20px;
-  margin-top: 40px;
 }
 
-/* Grid Layouts - Responsive Refinement */
-.grid-layout-soft-glam {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid-layout-glamour {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-layout-creative {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-/* Featured item in Glamour */
-.grid-featured {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-@media (max-width: 1024px) {
-  .grid-layout-soft-glam {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-    .editorial-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px;
-    }
-    
-    .grid-featured {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-}
-
-.portfolio-item {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  background: var(--bg-pink);
-}
-
-.flex-grid {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.flex-grid .portfolio-item {
-  flex: 1;
-  min-width: 300px;
-}
-
-.portfolio-item {
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.grid-featured {
-  grid-row: span 2;
-}
-
-.grid-filler {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  background: var(--bg-pink);
-  border-radius: 0;
-  text-align: center;
-}
-
-.editorial-quote p {
+.category-number {
   font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 1.5rem;
-  color: var(--primary-pink-dark);
+  font-size: 3rem;
+  color: var(--primary-pink);
+  opacity: 0.2;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.category-info h3 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0;
+  color: var(--text-dark);
+  text-transform: uppercase;
+}
+
+.category-desc {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  max-width: 400px;
+  text-align: right;
   line-height: 1.4;
 }
 
-.img-container {
-  position: relative;
-  border-radius: 0;
-  overflow: hidden;
-  aspect-ratio: 1/1;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  background: var(--bg-pink); /* Placeholder if image fails */
+/* Masonry-like Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px; /* Reduced from 25px */
 }
 
-/* Vertical orientation for first and third sections */
-.look-section:nth-child(1) .img-container,
-.look-section:nth-child(3) .img-container {
-    aspect-ratio: 4/5;
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  background: var(--bg-pink);
 }
+
+/* Item Spans for Interesting Layout */
+.span-6 { grid-column: span 6; }
+.span-4 { grid-column: span 4; }
+.span-3 { grid-column: span 3; }
+.span-8 { grid-column: span 8; }
+.span-12 { grid-column: span 12; }
+
+.row-2 { grid-row: span 2; }
+
+.portfolio-item .img-container {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto; /* Let span/row control height or use specific ones */
+  border-radius: 4px; /* Reduced from 8px for tighter look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Softer shadow for tighter grid */
+}
+
+.aspect-portrait { aspect-ratio: 4/5 !important; }
+.aspect-square { aspect-ratio: 1/1 !important; }
+.aspect-landscape { aspect-ratio: 3/2 !important; }
 
 .portfolio-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
-  filter: sepia(0.1) saturate(1.1) contrast(1.02); /* Warm unifying tone */
-}
-
-.portfolio-label {
-    display: none; /* Removed for editorial look */
+  object-fit: cover; /* Back to cover but with better container control */
+  transition: transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .item-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(212, 139, 158, 0.9) 0%,
-    rgba(197, 165, 142, 0.8) 100%
-  );
+  padding: 40px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   opacity: 0;
-  padding: 30px;
-  text-align: center;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 3;
-  backdrop-filter: blur(2px);
+  transition: all 0.4s ease;
+  transform: translateY(10px);
 }
 
-.item-overlay span {
+.item-overlay h4 {
   color: var(--white);
-  font-size: 1.2rem;
   font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
 .item-overlay p {
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.8rem;
-  font-weight: 300;
-  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
 }
 
 .portfolio-item:hover .img-container img {
-  transform: scale(1.15);
-  filter: sepia(0) saturate(1.2) contrast(1.1) blur(2px);
+  transform: scale(1.05);
 }
 
 .portfolio-item:hover .item-overlay {
   opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px; /* Tighter mobile gap */
+  }
+  .span-6, .span-4, .span-3, .span-8, .span-12 { grid-column: span 1 !important; }
+  .row-2 { grid-row: span 1 !important; }
+  .category-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+  .category-desc { text-align: left; }
+  
+  /* Force manageable aspect ratios on mobile */
+  .portfolio-item .img-container {
+    aspect-ratio: 1/1 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-category {
+    margin-bottom: 60px;
+  }
 }
 
 /* Testimonials */

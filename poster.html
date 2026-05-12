@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup by El - Poster</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        :root {
+            --primary-pink: #d48b9e;
+            --primary-pink-dark: #c07a8d;
+            --bg-pink: #f9ebee;
+            --gold-accent: #c5a58e;
+            --text-dark: #222222;
+            --text-light: #666666;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #f0f0f0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        .poster {
+            width: 800px;
+            height: 1200px;
+            background-color: var(--white);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Hero Section */
+        .poster-header {
+            height: 350px;
+            background: url("assets/hero.png") center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .poster-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+            padding: 0 40px;
+        }
+
+        .poster-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .poster-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            margin-top: 10px;
+            color: #f9ebee;
+        }
+
+        .poster-tagline {
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            color: #e0e0e0;
+        }
+
+        /* Content Body */
+        .poster-body {
+            flex: 1;
+            padding: 50px 60px;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(180deg, var(--white) 0%, var(--bg-pink) 100%);
+        }
+
+        /* Services Grid */
+        .section-label {
+            display: block;
+            color: var(--gold-accent);
+            letter-spacing: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--text-dark);
+            text-align: center;
+            margin: 0 0 40px 0;
+            line-height: 1;
+        }
+
+        .services-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .service-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            flex: 1;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(212, 139, 158, 0.2);
+        }
+
+        .service-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 0 0 10px 0;
+            color: var(--text-dark);
+        }
+
+        .service-price {
+            font-size: 2.5rem;
+            color: var(--primary-pink);
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+
+        .service-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .service-note {
+            text-align: center;
+            font-style: italic;
+            color: var(--gold-accent);
+            font-size: 0.9rem;
+            margin: 10px 0 40px 0;
+        }
+
+        /* Portfolio Selection */
+        .portfolio-grid {
+            display: flex;
+            gap: 20px;
+            height: 250px;
+            margin-bottom: auto;
+        }
+
+        .portfolio-img {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer / Contact */
+        .poster-footer {
+            background: var(--primary-pink);
+            color: var(--white);
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 0 0 0;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .contact-details {
+            display: flex;
+            gap: 30px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Print Instructions */
+        @media print {
+            body { background: none; padding: 0; }
+            .poster { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <!-- Header Section -->
+        <div class="poster-header">
+            <div class="header-content">
+                <div class="poster-tagline">Freelance Makeup Artist</div>
+                <h1 class="poster-title">Makeup by El</h1>
+                <div class="poster-subtitle">Enhancing your beauty for every special moment</div>
+            </div>
+        </div>
+
+        <!-- Body Section -->
+        <div class="poster-body">
+            
+            <div class="section-label">What I Offer</div>
+            <h2 class="section-title">Services & Rates</h2>
+
+            <div class="services-row">
+                <div class="service-box">
+                    <h3 class="service-title">Makeup Only</h3>
+                    <p class="service-price">₱800</p>
+                    <p class="service-desc">Full glam or natural makeup tailored to your event and style.</p>
+                </div>
+                <div class="service-box">
+                    <h3 class="service-title">Hair & Makeup</h3>
+                    <p class="service-price">₱1,000</p>
+                    <p class="service-desc">Complete hair styling and makeup for a polished, event-ready look.</p>
+                </div>
+            </div>
+            <p class="service-note">Home service available around Metro Manila. *Transpo fee applies if outside Sampaloc, Manila.</p>
+
+            <div class="section-label" style="margin-top: 10px;">My Work</div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-img">
+                    <img src="assets/thai1.jfif" alt="Glam Look">
+                </div>
+                <div class="portfolio-img">
+                    <img src="assets/soft-glam.jfif" alt="Soft Glam Look">
+                </div>
+                <div class="portfolio-img">
+                    <img src="assets/thai.jfif" alt="Thai Look">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="poster-footer">
+            <div class="footer-logo">Makeup by El</div>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Sampaloc, Manila
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    09926653116
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    @elglams_
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
